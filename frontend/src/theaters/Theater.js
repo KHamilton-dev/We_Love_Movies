@@ -17,13 +17,11 @@ function Theater({ theater }) {
         <section className="col">
           <div className="row">
             {theater.movies.map((movie) => (
-              <div key={movie.movie_id} className="col-2">
+              <div key={movie.movie_id} className="col-3">
                 <Link to={`/movies/${movie.movie_id}`}>
-                  <img
-                    src={movie.image_url}
-                    alt={`${movie.title} Poster`}
-                    className="w-100"
-                  />
+                  <h6 className="font-poppins-heading text-center mt-2">
+                    {movie.title}
+                  </h6>
                 </Link>
               </div>
             ))}
